@@ -1,0 +1,48 @@
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir g27
+3) Зайти в папку - cd g27
+4) Создать 3 папки - mkdir f1 f2 f4
+5) Зайти в любоую папку - cd f4
+6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt a.json b.json
+7) Создать 3 папки - mkdir n1 n2 n3
+8) Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - vim 1.txt
+10) + написать туда что-нибудь, любой текст -
+
+ 
+"Two roads diverged in a yellow wood,
+And sorry I could not travel both
+And be one traveler, long I stood
+And looked down one as far as I could
+To where it bent in the undergrowth.
+
+Then took the other, as just as fair,
+And having perhaps the better claim,
+Because it was grassy and wanted wear;
+Though as for that the passing there
+Had worn them really about the same."
+
+
+11) + сохранить и выйти - :wq
+12) Выйти из папки на уровень выше - cd ..
+13) Переместить любые 2 файла, которые вы создали, в любую другую папку - mv f4/{a.json,b.json} f1
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку - cp f4/{1.txt,2.txt,3.txt} f1
+15) Найти файл по имени - find . -name a.json
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает - tail -f 1.txt
+17) вывести несколько первых строк из текстового файла - head -n3 1.txt
+18) вывести несколько последних строк из текстового файла - tail -n4 1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает - less -N 1.txt
+20) вывести дату и время - date
+
+1) Отправить http запрос на сервер - curl http://162.55.220.72:5005/terminal-hw-request
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+ cd g27/f2 && mkdir n1 n2 n3 && cd n3 && touch aa.txt bb.txt cc.txt aaa.json bbb.json && mkdir z1 z2 z3 && ls -la && mv {aaa.json,bbb.json} z3/
+
+#!/bin/bash
+cd g27/f2
+mkdir n1 n2 n3
+cd n3
+touch aa.txt bb.txt cc.txt aaa.json bbb.json
+mkdir z1 z2 z3
+ls -la
+mv {aaa.json,bbb.json} z3/
