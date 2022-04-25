@@ -34,7 +34,7 @@ item_6 = 15;
 item_6_type = typeof(item_6);
 console.log(item_6_type);
 // Вывести в консоль тип данных item_6 в виде ——  “item_6 == ”  item_6,  “item_6_type == ”  item_6_type —— 
-console.log('item_6 == ' + typeof item_6 + ', item_6_type == ' + item_6_type);
+console.log('item_6 == ' + item_6 + ', item_6_type == ' + item_6_type);
 // Создать переменную item_7 и в ней преобразовать item_6 в String.
 let item_7;
 item_7 = String(item_6);
@@ -42,7 +42,7 @@ item_7 = String(item_6);
 // Создать переменную item_7_type. Присвоить переменной item_7_type тип переменной item_7
 let item_7_type = typeof(item_7);
 // Вывести в консоль тип данных item_7 в виде ——  “item_7 == ”  item_7,  “item_7_type == ”  item_7_type —— 
-console.log('item_7 == ' + typeof item_7 + ', item_7_type == ' + item_7_type);
+console.log('item_7 == ' + item_7 + ', item_7_type == ' + item_7_type);
 // Создать переменную “age_1” и присвоить ей значение 10.
 let age_1 = 10;
 // Создать переменную “age_2” и присвоить ей значение 18.
