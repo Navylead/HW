@@ -11,7 +11,8 @@
 
 function check1(obj1) {
     if(typeof obj1 == 'string') {
-        if(obj1 === ''){
+        console.log('Строка правильная!!!')
+        if(/^ *$/.test(obj1)){
             console.log('Строка пуста!')
         }
         if(obj1.length < 5){
@@ -36,4 +37,4 @@ function check1(obj1) {
         console.log('Строка неправильного формата:', typeof obj1)
     }
 }
-check1('');
+check1('aA@333333');
