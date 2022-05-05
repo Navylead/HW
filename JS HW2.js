@@ -11,30 +11,30 @@
 
 function check1(obj1) {
     if(typeof obj1 == 'string') {
-        console.log('Строка правильная!!!')
         if(/^ *$/.test(obj1)){
-            console.log('Строка пуста!')
+            console.log('Строка пуста или содержит только пробелы!')
         }
-        if(obj1.length < 5){
+        else if(obj1.length < 5){
             console.log('Должно быть минимум 5 символов в строке')
         }
-        if(obj1.length > 64){
+        else if(obj1.length > 64){
             console.log('Должно быть максимум 64 символа в строке')
         }
-        if(/[a-z]/.test(obj1) != true){
-            console.log('В строке должны содержаться буквы')
+        else if(/[a-zA-Z]/.test(obj1) != true){
+            console.log('В строке должны содержаться латинские буквы')
         }
-        if(/[0-9]/.test(obj1) != true){
+        else if(/[0-9]/.test(obj1) != true){
             console.log('В строке должны содержаться цифры')
         }
-        if(/[A-Z]/.test(obj1) != true){
+        else if(/[A-Z]/.test(obj1) != true){
             console.log('В строке должна содержаться хотя бы одна заглавная буква')
         }
-        if(obj1.includes('@') != true){
+        else if(obj1.includes('@') != true){
             console.log('В строке должен содержаться символ @')
         }
+        else{console.log("Well done!")}
     } else {
         console.log('Строка неправильного формата:', typeof obj1)
     }
 }
-check1('aA@333333');
+check1('');
