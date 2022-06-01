@@ -286,7 +286,7 @@ join roles r on role_id = r.id;
 select employee_name, role_name from roles_employee re
 join employees e on employee_id = e.id
 join roles r on role_id = r.id
-where role_name like '%Java%';
+where role_name like '%Java developer%';
 
 --8. Вывести имена и должность только Python разработчиков.
 select employee_name, role_name from roles_employee re
@@ -357,24 +357,27 @@ join roles r on r.id = re.role_id
 where role_name like '%Python%';
 
 --17. Вывести имена и зарплаты Junior Python разработчиков
-select monthly_salary, role_name from employee_salary es 
+select monthly_salary, role_name, employee_name from employee_salary es 
 join salary s on s.id = es.salary_id 
 join roles_employee re on re.employee_id = es.employee_id 
 join roles r on r.id = re.role_id
+join employees e on e.id = es.employee_id
 where role_name like '%Junior%' and role_name like '%Python%';
 
 --18. Вывести имена и зарплаты Middle JS разработчиков
-select monthly_salary, role_name from employee_salary es 
+select monthly_salary, role_name, employee_name from employee_salary es 
 join salary s on s.id = es.salary_id 
 join roles_employee re on re.employee_id = es.employee_id 
 join roles r on r.id = re.role_id
+join employees e on e.id = es.employee_id
 where role_name like '%Middle%' and role_name like '%JavaScript%';
 
 --19. Вывести имена и зарплаты Senior Java разработчиков
-select monthly_salary, role_name from employee_salary es 
+select monthly_salary, role_name, employee_name from employee_salary es 
 join salary s on s.id = es.salary_id 
 join roles_employee re on re.employee_id = es.employee_id 
 join roles r on r.id = re.role_id
+join employees e on e.id = es.employee_id
 where role_name like '%Senior%' and role_name like '%Java%';
 
 --20. Вывести зарплаты Junior QA инженеров
